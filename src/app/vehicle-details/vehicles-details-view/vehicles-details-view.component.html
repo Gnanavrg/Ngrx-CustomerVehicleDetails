@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mb-5 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Customer Vehicle Details</h5>
+                </div>
+                <div class="col-md-6" style="text-align:right;">
+                    <button class="btn btn-primary mt-2" [routerLink]="['/vehicleDetails/add']">Add Details</button>
+                </div>
+            </div>    
+        </div>
+        <div class="col-md-12 view_cont" *ngIf="vehicleDetailsList$ | async as vehicleData" >
+            <ng-container *ngFor="let data of vehicleData">
+                <div class="row mb-3 setBorder">
+                    <label for="colFormLabelSm"
+                        class="col-sm-2 col-form-label col-form-label-sm"><strong>Owner Name:</strong></label>
+                    <div class="col-sm-4">
+                        <p>{{data.name}}</p>
+                    </div>
+                    <div class="col-sm-5" style="text-align: right;">
+                        <button type="button" class="btn btn-link" [routerLink]="['/vehicleDetails/update', data.id]">Update</button>
+                        <button type="button" class="btn btn-link" (click)="onDeleteItem(data.id)">Delete</button>
+                    </div>
+                    <h6>Vehicale Details:</h6>
+                <ng-container *ngFor="let list of data.vehicleList">
+                        <div class="container">
+                            <div class="row setBGChild">
+                                <label class="col-sm-2 col-form-label col-form-label-sm"><strong>Vehicle
+                                        Model:</strong></label>
+                                <div class="col-sm-2">
+                                    <p>{{list.vehicleModel}}</p>
+                                </div>
+                                <label class="col-sm-2 col-form-label col-form-label-sm"><strong>Vehicle
+                                        Number:</strong></label>
+                                <div class="col-sm-2">
+                                    <p>{{list.vehicleNumber}}</p>
+                                </div>
+                                <!-- <div class="col-sm-4">
+                                    <button type="button" class="btn btn-link" [routerLink]="['/vehicleDetails/update', list.id]">Update</button>
+                                    <button type="button" class="btn btn-link" (click)="onDeleteItem(list.id)">Delete</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

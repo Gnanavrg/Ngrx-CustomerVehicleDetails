@@ -1,0 +1,17 @@
+.setBorder{
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.setBGChild{
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    padding: 5px;
+}
+
+.view_cont{
+    height:600px; 
+    overflow:auto; 
+    overflow-x: hidden;
+}

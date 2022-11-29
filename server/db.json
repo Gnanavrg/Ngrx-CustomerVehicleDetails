@@ -1,0 +1,28 @@
+{
+  "customerDetails": [
+    {
+      "name": "Sundaram G",
+      "vehicleList": [
+        {
+          "vehicleModel": "Maruthi",
+          "vehicleNumber": "ADV423"
+        },
+        {
+          "vehicleModel": "Hyundai",
+          "vehicleNumber": "ASV123"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Ramachandran V",
+      "vehicleList": [
+        {
+          "vehicleModel": "TATA",
+          "vehicleNumber": "BDX543"
+        }
+      ],
+      "id": 2
+    }
+  ]
+}
