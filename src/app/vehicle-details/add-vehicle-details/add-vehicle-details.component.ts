@@ -16,6 +16,7 @@ export class AddVehicleDetailsComponent implements OnInit {
 
   addFormData!:FormGroup;
   vehicleData!: CustomerDetailsModel;
+  title = "Add Customer Vehicle details";
 
   constructor(private store:Store<VehicleDetailsState>, private router:Router, private fb:FormBuilder) { }
 

@@ -14,6 +14,8 @@ export class VehiclesDetailsViewComponent implements OnInit {
 
   vehicleDetailsList$!:Observable<CustomerDetailsModel[]>;
 
+  title = "Customer Vehicle Details";
+
   constructor(private store:Store<CustomerDetailsModel>) { }
 
   ngOnInit(): void {

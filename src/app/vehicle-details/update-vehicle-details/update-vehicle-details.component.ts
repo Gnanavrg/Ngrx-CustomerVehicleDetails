@@ -22,6 +22,8 @@ export class UpdateVehicleDetailsComponent implements OnInit {
   containSubscription!: Subscription;
   renderForm:boolean = false;
 
+  title = "Update Customer Vehicle details"
+
   constructor(private store: Store<VehicleDetailsState>, private router: Router, private fb: FormBuilder) { }
 
   ngOnInit(): void {

@@ -19,7 +19,7 @@ export class VehicleDetailsEffects{
             ofType(loadData),
             mergeMap((action) => {
                 return this.vehicleDetailsService.getItem().pipe(map((customerDetails:CustomerDetailsModel[]) =>{
-                    console.log(customerDetails);
+                    //console.log(customerDetails);
                     return loadDataSuccess({customerDetails})
                 }),
                 catchError((error) => {

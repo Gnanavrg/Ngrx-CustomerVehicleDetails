@@ -7,7 +7,7 @@ export const vehicledetailsFeatureKey = 'vehicleDetails';
 export const _vehicleDetailsReducer = createReducer(
   initialState,
   on(addItemSuccess, (state, action) => {
-      return vehicleDetailsAdapter.addOne(action.newItem, state);
+      return vehicleDetailsAdapter.addOne(action.newItem, state); 
   }),
   on(updateItemSuccess, (state, action) => {
     return vehicleDetailsAdapter.updateOne(action.editItem, state);
